@@ -53,23 +53,23 @@ void loop()
   int three = debouncer3.fell();
   
 //canales 1-6 =>>> canal 1- flama 1 , canal 2 flama 2 , canal 3 flama 3, canal 4 flama 4 , canal 5 flama 5, canal 6 flama piloto
-
+// piloto encendido i disparos valor <200
 // Button 1   encender
 {
     if (one == LOW)  
       { 
-      dmx_master.setChannelValue ( 6, 1 );  //canal 6 , valor entre 0-255 , 1 encendido 
+      dmx_master.setChannelValue ( 6, 255 );  //canal 6 , valor entre 201-255  encendido 
       }
 }
 // Button 2 secuencia 1
   {    
     if (two == LOW)  
       {
-      dmx_master.setChannelValue ( 2, 1 );  
-      dmx_master.setChannelValue ( 3, 1 );  
-      dmx_master.setChannelValue ( 4, 1 );  
-      dmx_master.setChannelValue ( 5, 1 );  
-      dmx_master.setChannelValue ( 6, 1 );  
+      dmx_master.setChannelValue ( 2, 255 );  
+      dmx_master.setChannelValue ( 3, 255 );  
+      dmx_master.setChannelValue ( 4, 255 );  
+      dmx_master.setChannelValue ( 5, 255 );  
+      dmx_master.setChannelValue ( 6, 255 );  
       } 
   }
 // Button 3  apagar
@@ -77,7 +77,7 @@ void loop()
     
     if (three == LOW)  
       {
-      dmx_master.setChannelValue ( 1, 255 );  // apagar
+      dmx_master.setChannelValue ( 1, 0 );  // apagar valor no superior a 200
       }   
   }
 
