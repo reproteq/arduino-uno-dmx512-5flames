@@ -1,3 +1,6 @@
+//Arduino Uno Dmx512 Flame Controller for FireOne 32Cue With Arduino Shield DMX
+//Author TT 2019 for PirotecniaTomás
+
 #include <Bounce2.h>              // Bounce Buttons
 #include <Conceptinetics.h>       // Pack to talk to my DMX Sheild
 
@@ -36,8 +39,12 @@ void setup()
   debouncer3.interval(5); // interval in ms
   
   // Enable DMX master interface and start transmitting
-  dmx_master.enable ();  
-  dmx_master.setChannelRange ( 2, 25, 127 );
+  dmx_master.enable ();
+  
+  // Set channel 1 - 512 @ 100%
+  dmx_master.setChannelRange ( 1, 512, 255 );  
+  
+ // dmx_master.setChannelRange ( 2, 25, 127 );
 
 }
 
@@ -85,7 +92,7 @@ void loop()
     
     if (three == LOW)  
       {
-      dmx_master.setChannelValue ( 1, 0 );  // apagar valor no superior a 200
+      dmx_master.setChannelValue ( 6, 0 );  // apagar valor no superior a 200
       }   
   }
 
