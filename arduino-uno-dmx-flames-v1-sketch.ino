@@ -61,38 +61,72 @@ void loop()
   
 //canales 1-6 =>>> canal 1- flama 1 , canal 2 flama 2 , canal 3 flama 3, canal 4 flama 4 , canal 5 flama 5, canal 6 flama piloto
 // piloto encendido i disparos valor <200
-// Button 1   encender
+
+// Button 1   encender piloto
 {
     if (one == LOW)  
       { 
-      dmx_master.setChannelValue ( 6, 255 );  //canal 6 , valor entre 201-255  encendido 
+      dmx_master.setChannelValue ( 6, 255 );  //canal 6 , valor entre 201-255  encender piloto
       }
 }
 // Button 2 secuencia 1
   {    
     if (two == LOW)  
       {
+
+
+      // secuencia abrir-cerrar uno a uno 
+      dmx_master.setChannelValue ( 1, 255 );
+      delay (2000 );
+      dmx_master.setChannelValue ( 1, 0 );
+
+      dmx_master.setChannelValue ( 2, 255 ); 
+      delay (2000 );
+      dmx_master.setChannelValue ( 2, 0 );  
+
+      dmx_master.setChannelValue ( 3, 255 );  
+      delay (2000 );
+      dmx_master.setChannelValue ( 3, 0 ); 
+
+      dmx_master.setChannelValue ( 4, 255 ); 
+      delay (2000 );  
+      dmx_master.setChannelValue ( 4, 0 );  
+
+      dmx_master.setChannelValue ( 5, 255 );  
+      delay (2000 );
+      dmx_master.setChannelValue ( 5, 0 );  
+
+      //fin secuencia abrir cerrar uno a uno
+
+              
+      // abrir todos los inyectores 
+      dmx_master.setChannelValue ( 1, 255 );
       dmx_master.setChannelValue ( 2, 255 );  
       dmx_master.setChannelValue ( 3, 255 );  
       dmx_master.setChannelValue ( 4, 255 );  
       dmx_master.setChannelValue ( 5, 255 );  
-      dmx_master.setChannelValue ( 6, 255 ); 
-      delay (3000 );
+  
+      delay (2000 );
+      
+      // cerrar todos los inyectores
+      dmx_master.setChannelValue ( 1, 0 );  
       dmx_master.setChannelValue ( 2, 0 );  
       dmx_master.setChannelValue ( 3, 0 );  
       dmx_master.setChannelValue ( 4, 0 );  
       dmx_master.setChannelValue ( 5, 0 );  
-      dmx_master.setChannelValue ( 6, 0 );  
+      
+
+         
       } 
 
        
   }
-// Button 3  apagar
+// Button 3  apagar piloto
   {
     
     if (three == LOW)  
       {
-      dmx_master.setChannelValue ( 6, 0 );  // apagar valor no superior a 200
+      dmx_master.setChannelValue ( 6, 0 );  //canal 6 , valor entre 0-199  apagar piloto
       }   
   }
 
