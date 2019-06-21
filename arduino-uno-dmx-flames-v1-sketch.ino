@@ -69,8 +69,16 @@ void loop()
       dmx_master.setChannelValue ( 3, 255 );  
       dmx_master.setChannelValue ( 4, 255 );  
       dmx_master.setChannelValue ( 5, 255 );  
-      dmx_master.setChannelValue ( 6, 255 );  
+      dmx_master.setChannelValue ( 6, 255 ); 
+      delay (3000 );
+      dmx_master.setChannelValue ( 2, 0 );  
+      dmx_master.setChannelValue ( 3, 0 );  
+      dmx_master.setChannelValue ( 4, 0 );  
+      dmx_master.setChannelValue ( 5, 0 );  
+      dmx_master.setChannelValue ( 6, 0 );  
       } 
+
+       
   }
 // Button 3  apagar
   {
