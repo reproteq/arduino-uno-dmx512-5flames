@@ -172,16 +172,129 @@ void loop()
 {
     if (uno == LOW)  
       { 
-      dmx_master.setChannelValue ( 6, 255 );  //canal 6 , valor entre 201-255  encender piloto
+      dmx_master.setChannelValue ( 6, 255 );  //canal 6 , valor entre 201-255  encender piloto     
+      dmx_master.setChannelValue ( 1, 255 );
+      delay (200 );
+      dmx_master.setChannelValue ( 1, 0 );     
+      dmx_master.setChannelValue ( 6, 0 );  //canal 6 , valor entre 0<200  apagar piloto
       }
 }
 // Button 2 secuencia 1
   {    
     if (dos == LOW)  
       {
+      dmx_master.setChannelValue ( 6, 255 );  //canal 6 , valor entre 201-255  encender piloto    
+      dmx_master.setChannelValue ( 2, 255 );
+      delay (200 );
+      dmx_master.setChannelValue ( 2, 0 );    
+      dmx_master.setChannelValue ( 6, 0 );  //canal 6 , valor entre 0<200  apagar piloto       
+      } 
 
+       
+  }
+// Button 3  apagar piloto
+  {
+    
+    if (tres == LOW)  
+      {
+      dmx_master.setChannelValue ( 6, 255 );  //canal 6 , valor entre 201-255  encender piloto    
+      dmx_master.setChannelValue ( 3, 255 );
+      delay (200 );
+      dmx_master.setChannelValue ( 3, 0 );    
+      dmx_master.setChannelValue ( 6, 0 );  //canal 6 , valor entre 0<200  apagar piloto    
+      }   
+  }
 
-      // secuencia abrir-cerrar uno a uno 
+// Button 4  
+{
+    if (cuatro == LOW)  
+      { 
+      dmx_master.setChannelValue ( 6, 255 );  //canal 6 , valor entre 201-255  encender piloto    
+      dmx_master.setChannelValue ( 4, 255 );
+      delay (200 );
+      dmx_master.setChannelValue ( 4, 0 );    
+      dmx_master.setChannelValue ( 6, 0 );  //canal 6 , valor entre 0<200  apagar piloto
+      }
+}
+
+// Button 5  
+{
+    if (cinco == LOW)  
+      { 
+      dmx_master.setChannelValue ( 6, 255 );  //canal 6 , valor entre 201-255  encender piloto    
+      dmx_master.setChannelValue ( 5, 255 );
+      delay (200 );
+      dmx_master.setChannelValue ( 5, 0 );    
+      dmx_master.setChannelValue ( 6, 0 );  //canal 6 , valor entre 0<200  apagar piloto
+      }
+}
+
+// Button 6  
+{
+    if (seis == LOW)  
+      { 
+      dmx_master.setChannelValue ( 6, 255 );  //canal 6 , valor entre 201-255  encender piloto     
+      dmx_master.setChannelValue ( 1, 255 );
+      delay (600 );
+      dmx_master.setChannelValue ( 1, 0 );     
+      dmx_master.setChannelValue ( 6, 0 );  //canal 6 , valor entre 0<200  apagar piloto
+      }
+}
+
+// Button 7  
+{
+    if (siete == LOW)  
+      { 
+      dmx_master.setChannelValue ( 6, 255 );  //canal 6 , valor entre 201-255  encender piloto     
+      dmx_master.setChannelValue ( 2, 255 );
+      delay (600 );
+      dmx_master.setChannelValue ( 2, 0 );     
+      dmx_master.setChannelValue ( 6, 0 );  //canal 6 , valor entre 0<200  apagar piloto
+      }
+}
+
+// Button 8  
+{
+    if (ocho == LOW)  
+      { 
+      dmx_master.setChannelValue ( 6, 255 );  //canal 6 , valor entre 201-255  encender piloto     
+      dmx_master.setChannelValue ( 3, 255 );
+      delay (600 );
+      dmx_master.setChannelValue ( 3, 0 );     
+      dmx_master.setChannelValue ( 6, 0 );  //canal 6 , valor entre 0<200  apagar piloto
+      }
+}
+
+// Button 9  
+{
+    if (nueve == LOW)  
+      { 
+      dmx_master.setChannelValue ( 6, 255 );  //canal 6 , valor entre 201-255  encender piloto     
+      dmx_master.setChannelValue ( 4, 255 );
+      delay (600 );
+      dmx_master.setChannelValue ( 4, 0 );     
+      dmx_master.setChannelValue ( 6, 0 );  //canal 6 , valor entre 0<200  apagar piloto
+      }
+}
+
+// Button 10 
+{
+    if (diez == LOW)  
+      { 
+      dmx_master.setChannelValue ( 6, 255 );  //canal 6 , valor entre 201-255  encender piloto     
+      dmx_master.setChannelValue ( 5, 255 );
+      delay (600 );
+      dmx_master.setChannelValue ( 5, 0 );     
+      dmx_master.setChannelValue ( 6, 0 );  //canal 6 , valor entre 0<200  apagar piloto
+      }
+}
+
+// Button 11  
+{
+    if (once == LOW)  
+      { 
+      dmx_master.setChannelValue ( 6, 255 );  //canal 6 , valor entre 201-255  encender piloto
+      // secuencia abrir-cerrar 1 a 5 durante 600ms
       dmx_master.setChannelValue ( 1, 255 );
       delay (600 );
       dmx_master.setChannelValue ( 1, 0 );
@@ -203,100 +316,9 @@ void loop()
       dmx_master.setChannelValue ( 5, 0 );  
 
       //fin secuencia abrir cerrar uno a uno
+     dmx_master.setChannelValue ( 6, 0 );  //canal 6 , valor entre 0<200  apagar piloto
 
-              
-      // abrir todos los inyectores 
-      dmx_master.setChannelValue ( 1, 255 );
-      dmx_master.setChannelValue ( 2, 255 );  
-      dmx_master.setChannelValue ( 3, 255 );  
-      dmx_master.setChannelValue ( 4, 255 );  
-      dmx_master.setChannelValue ( 5, 255 );  
-  
-      delay (600 );
       
-      // cerrar todos los inyectores
-      dmx_master.setChannelValue ( 1, 0 );  
-      dmx_master.setChannelValue ( 2, 0 );  
-      dmx_master.setChannelValue ( 3, 0 );  
-      dmx_master.setChannelValue ( 4, 0 );  
-      dmx_master.setChannelValue ( 5, 0 );  
-      
-
-         
-      } 
-
-       
-  }
-// Button 3  apagar piloto
-  {
-    
-    if (tres == LOW)  
-      {
-      dmx_master.setChannelValue ( 6, 0 );  //canal 6 , valor entre 0-199  apagar piloto
-      }   
-  }
-
-// Button 4  
-{
-    if (cuatro == LOW)  
-      { 
-      //dmx_master.setChannelValue ( 6, 255 );  //canal 6 , valor entre 201-255  encender piloto
-      }
-}
-
-// Button 5  
-{
-    if (cinco == LOW)  
-      { 
-      //dmx_master.setChannelValue ( 6, 255 );  //canal 6 , valor entre 201-255  encender piloto
-      }
-}
-
-// Button 6  
-{
-    if (seis == LOW)  
-      { 
-      //dmx_master.setChannelValue ( 6, 255 );  //canal 6 , valor entre 201-255  encender piloto
-      }
-}
-
-// Button 7  
-{
-    if (siete == LOW)  
-      { 
-      //dmx_master.setChannelValue ( 6, 255 );  //canal 6 , valor entre 201-255  encender piloto
-      }
-}
-
-// Button 8  
-{
-    if (ocho == LOW)  
-      { 
-      //dmx_master.setChannelValue ( 6, 255 );  //canal 6 , valor entre 201-255  encender piloto
-      }
-}
-
-// Button 9  
-{
-    if (nueve == LOW)  
-      { 
-      //dmx_master.setChannelValue ( 6, 255 );  //canal 6 , valor entre 201-255  encender piloto
-      }
-}
-
-// Button 10 
-{
-    if (diez == LOW)  
-      { 
-      //dmx_master.setChannelValue ( 6, 255 );  //canal 6 , valor entre 201-255  encender piloto
-      }
-}
-
-// Button 11  
-{
-    if (once == LOW)  
-      { 
-      //dmx_master.setChannelValue ( 6, 255 );  //canal 6 , valor entre 201-255  encender piloto
       }
 }
 
@@ -304,7 +326,32 @@ void loop()
 {
     if (doce == LOW)  
       { 
-      //dmx_master.setChannelValue ( 6, 255 );  //canal 6 , valor entre 201-255  encender piloto
+      dmx_master.setChannelValue ( 6, 255 );  //canal 6 , valor entre 201-255  encender piloto
+      // secuencia abrir-cerrar 1 a 5 durante 600ms
+      dmx_master.setChannelValue ( 5, 255 );
+      delay (600 );
+      dmx_master.setChannelValue ( 5, 0 );
+
+      dmx_master.setChannelValue ( 4, 255 ); 
+      delay (600 );
+      dmx_master.setChannelValue ( 4, 0 );  
+
+      dmx_master.setChannelValue ( 3, 255 );  
+      delay (600 );
+      dmx_master.setChannelValue ( 3, 0 ); 
+
+      dmx_master.setChannelValue ( 2, 255 ); 
+      delay (600 );  
+      dmx_master.setChannelValue ( 2, 0 );  
+
+      dmx_master.setChannelValue ( 1, 255 );  
+      delay (600 );
+      dmx_master.setChannelValue ( 1, 0 );  
+
+      //fin secuencia abrir cerrar uno a uno
+     dmx_master.setChannelValue ( 6, 0 );  //canal 6 , valor entre 0<200  apagar piloto
+
+      
       }
 }
 
@@ -312,15 +359,36 @@ void loop()
 {
     if (trece == LOW)  
       { 
-      //dmx_master.setChannelValue ( 6, 255 );  //canal 6 , valor entre 201-255  encender piloto
+      dmx_master.setChannelValue ( 6, 255 );  //canal 6 , valor entre 201-255  encender piloto
+      // abrir todos los inyectores 
+      dmx_master.setChannelValue ( 1, 255 );
+      dmx_master.setChannelValue ( 2, 255 );  
+      dmx_master.setChannelValue ( 3, 255 );  
+      dmx_master.setChannelValue ( 4, 255 );  
+      dmx_master.setChannelValue ( 5, 255 );  
+      delay (600 );
+      // cerrar todos los inyectores
+      dmx_master.setChannelValue ( 1, 0 );  
+      dmx_master.setChannelValue ( 2, 0 );  
+      dmx_master.setChannelValue ( 3, 0 );  
+      dmx_master.setChannelValue ( 4, 0 );  
+      dmx_master.setChannelValue ( 5, 0 );   
+      dmx_master.setChannelValue ( 6, 0 );  //canal 6 , valor entre 0<200  apagar piloto
+            
       }
 }
 
 // Button 14  
 {
     if (catorce == LOW)  
-      { 
-      //dmx_master.setChannelValue ( 6, 255 );  //canal 6 , valor entre 201-255  encender piloto
+      {      
+      dmx_master.setChannelValue ( 6, 255 );  //canal 6 , valor entre 201-255  encender piloto
+      // abrir todos los inyectores 
+      dmx_master.setChannelValue ( 1, 255 );
+      dmx_master.setChannelValue ( 2, 255 );  
+      dmx_master.setChannelValue ( 3, 255 );  
+      dmx_master.setChannelValue ( 4, 255 );  
+      dmx_master.setChannelValue ( 5, 255 );       
       }
 }
 
@@ -328,7 +396,13 @@ void loop()
 {
     if (quince == LOW)  
       { 
-      //dmx_master.setChannelValue ( 6, 255 );  //canal 6 , valor entre 201-255  encender piloto
+      // cerrar todos los inyectores
+      dmx_master.setChannelValue ( 1, 0 );  
+      dmx_master.setChannelValue ( 2, 0 );  
+      dmx_master.setChannelValue ( 3, 0 );  
+      dmx_master.setChannelValue ( 4, 0 );  
+      dmx_master.setChannelValue ( 5, 0 );   
+      dmx_master.setChannelValue ( 6, 0 );  //canal 6 , valor entre 0<200  apagar piloto
       }
 }
 
