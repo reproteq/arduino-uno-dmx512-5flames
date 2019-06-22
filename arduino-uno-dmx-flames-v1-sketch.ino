@@ -1,3 +1,4 @@
+
 //Arduino Uno Dmx512 Flame Controller for FireOne 32Cue With Arduino Shield DMX
 //Author TT 2019 for PirotecniaTomás
 
@@ -77,23 +78,23 @@ void loop()
 
       // secuencia abrir-cerrar uno a uno 
       dmx_master.setChannelValue ( 1, 255 );
-      delay (2000 );
+      delay (600 );
       dmx_master.setChannelValue ( 1, 0 );
 
       dmx_master.setChannelValue ( 2, 255 ); 
-      delay (2000 );
+      delay (600 );
       dmx_master.setChannelValue ( 2, 0 );  
 
       dmx_master.setChannelValue ( 3, 255 );  
-      delay (2000 );
+      delay (600 );
       dmx_master.setChannelValue ( 3, 0 ); 
 
       dmx_master.setChannelValue ( 4, 255 ); 
-      delay (2000 );  
+      delay (600 );  
       dmx_master.setChannelValue ( 4, 0 );  
 
       dmx_master.setChannelValue ( 5, 255 );  
-      delay (2000 );
+      delay (600 );
       dmx_master.setChannelValue ( 5, 0 );  
 
       //fin secuencia abrir cerrar uno a uno
@@ -106,7 +107,7 @@ void loop()
       dmx_master.setChannelValue ( 4, 255 );  
       dmx_master.setChannelValue ( 5, 255 );  
   
-      delay (2000 );
+      delay (600 );
       
       // cerrar todos los inyectores
       dmx_master.setChannelValue ( 1, 0 );  
