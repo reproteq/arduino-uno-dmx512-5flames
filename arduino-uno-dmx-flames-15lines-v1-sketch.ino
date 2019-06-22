@@ -9,6 +9,8 @@
 #define RXEN_PIN              2   // The Return Pin on Arduino
 
 //Pins 2,3,4 are used to transmit DMX signals
+//switch config arduino shield dmx EN DE TX-I0 RX-I0
+
 const int button1Pin = 5;       // Pin input 1
 const int button2Pin = 6;       // Pin input 2
 const int button3Pin = 7;     // Pin input 3
