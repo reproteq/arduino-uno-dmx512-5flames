@@ -1,4 +1,6 @@
 #include <DmxSimple.h>
+// https://github.com/PaulStoffregen/DmxSimple
+
 const int buttonPin1 = 5;       // Pin input one (Pins 2,3,4 are used to transmit DMX signals)
 const int buttonPin2 = 6;       // Pin input two
 const int buttonPin3 = 7;     // Pin input three
